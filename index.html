@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website Design</title>
+    <!-- css file  -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --primary-color: #fff;
+    --primary-shade: #f7f5f2;
+    --seconday-color: #000;
+    --secondary-shade: #4b4c4c;
+    --red-color: #d40700;
+    --red-shade: #b20600;
+    --accent-color: #ffee63;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* header section  */
+
+header{
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(50, 50, 51, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(to right, #040404, #242424, #656565);
+    color: var(--primary-color);
+}
+
+.nav-bar {
+    padding: 30px 0;
+}
+
+span{
+    color: var(--red-color);
+}
+
+ul li a{
+    margin: 0 10px;
+    padding: 0 5px;
+    color: var(--accent-color);
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li a::before{
+    content: '';
+    width: 0;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: 0.6s ease;
+}
+
+ul li a:hover::before{
+    width: 100%;
+}
+
+/* button  */
+
+.btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--red-color);
+    color: var(--primary-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 5px;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background-color: var(--red-shade);
+    color: var(--primary-shade);
+    border: 2px solid var(--red-color);
+}
+
+/* header content  */
+
+.content{
+    height: 90vh;
+    position: relative;
+}
+
+.content .right img{
+    width: 120%;
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.content .right img:hover{
+    filter: drop-shadow(16px 5px 20px burlywood);
+}
+
+h4, p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.color-box{
+    width: 560px;
+    height: 480px;
+    border: 5px solid red;
+    transform: rotate(48deg);
+    position: absolute;
+    top: 120px;
+    right: 10px;
+}
+
+/* about sec  */
+
+.about-me-sec{
+    min-height: 100vh;
+    background-color: var(--secondary-shade);
+    color: var(--primary-color);
+}
+
+.about-me-sec hr{
+    border: 2px solid red;
+    margin-bottom: 2rem;
+}
+
+.about-content img{
+    width: 100%;
+    transform: scaleX(-1);
+}
+
+.about-content ul{
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.about-content span{
+    color: #C6DCE4;
+}
+
+.dot{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.dot-w{
+    background-color: var(--primary-color);
+}
+
+.dot-b{
+    background-color: var(--seconday-color);
+}
+
+.dot-ws{
+    background-color: var(--primary-shade);
+}
+
+.dot-bs{
+    background-color: #C6DCE4;
+}
+
+.dot-a{
+    background-color: var(--accent-color);
+}
+
+/* portfolio sec  */
+
+.portfolio-sec{
+    height: 110vh;
+    background-color: burlywood;
+}
+
+.portfolio > h3{
+    color: var(--primary-color);
+    margin-bottom: 50px;
+}
+
+.portfolio-child img{
+    width: 100%;
+}
+
+.portolio-parent{
+    gap: 30px;
+}
+
+.portfolio-child{
+    border: 1px solid var(--red-color);
+    border-radius: 8px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.portfolio-child:hover{
+    transform: scale(1.1);
+    background-color: lavender;
+}
+
+.portfolio-child h3{
+    margin-top: 10px;
+}
+
+.portfolio-child p{
+    margin-top: 5px;
+    line-height: 1.4;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.portfolio-child button{
+    margin: 15px;
+}
+
+/* experience sec  */
+
+.experience-sec{
+    height: 35vh;
+    background-color: var(--secondary-shade);
+    color: var(--primary-color);
+}
+
+.experience{
+    padding: 0 30px 0 30px;
+}
+
+.experience-details{
+    border-bottom: 2px solid var(--red-color);
+    padding-bottom: 30px;
+    margin-top: 40px;
+}
+
+.col p{
+    padding-top: 14px;
+    text-transform: uppercase;
+}
+
+/* testimonial section  */
+
+.testimonial-sec{
+    height: 90vh;
+    background-color: burlywood;
+}
+
+.testimonial-parent{
+    min-height: 75vh;
+}
+
+.testimonial-child{
+    width: 370px;
+    height: 280px;
+    padding: 0 25px;
+    box-shadow: 1px 2px 10px 5px bisque;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.testimonial-child:nth-child(2){
+    margin-bottom: 65px;
+}
+
+.testimonial-child:hover{
+    margin-top: 65px;
+    box-shadow: 5px 5px 20px 5px #f7f6e7;
+}
+
+.testimonial-child img{
+    width: 25%;
+    border-radius: 50%;
+    position: relative;
+    top: -30px;
+    left: 40%;
+}
+
+.review-sec{
+    margin-top: 40px;
+}
+
+.review-sec .icon-sec i{
+    color: #d40700;
+}
+
+.designation{
+    color: #b20600;
+    margin-top: 3px;
+}
+
+/* contact us  */
+
+.contact-us-sec{
+    background-color: darkgray;
+    height: 50vh;
+    padding: 35px 0;
+}
+
+.contact-us h3{
+    color: var(--primary-color);
+}
+
+.contact-details{
+    padding-top: 4rem;
+}
+
+.contact-details h5{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+#email-id{
+    width: 226px;
+    height: 28px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 2px 12px;
+}
+
+.right-sec input{
+    margin-left: 10px;
+}
+
+.right-sec button{
+    margin-left: 35px;
+    margin-top: 15px;
+}
+
+footer{
+    background-color: var(--secondary-shade);
+    padding: 10px 0;
+    color: burlywood;
+}
+
+
+#click, .menu-btn i{
+    display: none;
+}
+
+
+ @media (max-width:768px){
+
+    .nav-bar{
+        flex-direction: column;
+        position: relative;
+        background-color: var(--secondary-shade);
+        width: 100%;
+        height: 100vh;
+       
+    }
+ .nav-links ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+   
+    
+ }
+ .nav-links ul, .logo, .hire-me-btn{
+    display: none;
+ }
+
+ .color-box{
+    display: none;
+ }
+
+ .content{
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+ }
+
+ .menu-btn i{
+    display: block;
+   
+ }
+
+ .menu-btn{
+    position: absolute;
+    top: 30px;
+    right: 10px;
+ }
+
+
+    
+} 
+.layout{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flex{
+  display: flex;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.f-w-500{
+  font-weight: 500;
+}
+
+.f-w-600{
+  font-weight: 600;
+}
+
+.f-w-700{
+  font-weight: 700;
+}
+
+.letter-spacing2{
+  letter-spacing: 2px;
+}
+
+.btn2{
+  width: 140px;
+}
+
+.flex2{
+  flex: 2;
+}
+
+.flex3{
+  flex: 3;
+}
+
+.my-t-10{
+  margin-top: 10px;
+}
+
+.my-t-20{
+  margin-top: 20px;
+}
+
+.pd-t-30{
+  padding-top: 30px;
+}
+
+.w55{
+  width: 55%;
+}
+
+.text-center{
+  text-align: center;
+}
+
+
+.pd-30{
+  padding: 30px;
+}
+
+
+
+
+    </style>
+    <!-- font awesome cdn  -->
+    <script src="https://kit.fontawesome.com/c3171e834c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- header section start  -->
+    <header>
+        <div class="head-section layout">
+            <div class="nav-bar flex space-between align-center">
+                <div class="logo uppercase f-w-700 letter-spacing2"><span>SHIVRAJ</span> KARAVINAKOPP</div>
+                <div class="nav-links">
+                   
+                    <ul class="flex f-w-600">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Experience</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <button class="btn hire-me-btn">Hire Me</button>
+                <input type="checkbox" name="checkbox" id="click">
+                <label for="click" class="menu-btn" id="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
+            <!-- content  -->
+            <div class="content flex align-center">
+                <!-- left section  -->
+                <div class="left flex2">
+                    <h4 class="uppercase letter-spacing2">I'm <span>SHIVRAJ KARAVINAKOPP</span> </h4>
+                    <h2 class="my-t-10 uppercase letter-spacing2 f-w-700">Web Designer</h2>
+                    <p class="my-t-10">I am a creative designer with a diverse skill set encompassing HTML, CSS, and JavaScript, as well as proficiency in programming languages like C, Java, and Python. My aspiration is to channel these skills and my unwavering dedication into an organization that values and cultivates the potential of young professionals, while simultaneously propelling the company's growth. I am known for my diligence and motivation, which are complemented by my aptitude for swift and self-driven learning. This combination of creativity and technical prowess empowers me to tackle challenges with innovative solutions and contribute meaningfully to any team or project.</p>
+                    
+                </div>
+
+                <!-- right section  -->
+         
+        </div>
+    </header>        
+    <!-- about section start  -->
+
+    <!-- about section end  -->
+
+    <!-- portfolio section start  -->
+    <section class="portfolio-sec">
+        <div class="portfolio layout">
+            <h3 class="uppercase text-center pd-30">EDUCATIONAL PROFILE</h3>
+            <div class="portolio-parent flex justify-center align-center text-center">
+                <div class="portfolio-child">
+                    <h1>SSLC</h1>
+                    
+                    <p>In 2019, I completed my SSLC at Podar International School, Belgaum, achieving a commendable score of 86.3% under the CBSE board.
+
+
+
+
+                    </p>
+                    
+                </div>
+
+                <div class="portfolio-child">
+                    <img src="asset/food-burger.jpg" alt="">
+                    <h1>PUC</h1>
+                    <p>In 2021, I completed my PUC at Aryabhatta PU College, Dharwad, achieving an outstanding score of 95.8% in the Pre-University Board of Karnataka</p>
+                    
+                </div>
+                <div class="portfolio-child">
+                    <img src="asset/food-burger.jpg" alt="">
+                    <h1>BE</h1>
+                    <p>I am currently pursuing a Bachelor's degree in Computer Engineering at New Horizon College of Engineering, Bangalore, and have maintained a commendable GPA of 88.7% up until the fourth semester.</p>
+                    
+                </div>
+
+           
+            </div>
+        </div>
+    </section>
+    <section class="portfolio-sec">
+        <div class="portfolio layout">
+            <h3 class="uppercase text-center pd-30">PROJECTS</h3>
+            <div class="portolio-parent flex justify-center align-center text-center">
+                <div class="portfolio-child">
+                    <h1>Intership web Page</h1>
+                    <h3>Vaultofcodes  Website</h3>
+                    <p>"I have successfully created a replica of the original VaultofCode website. To enhance its visual appeal, I incorporated vibrant colors, captivating images, and other aesthetic elements."</p>
+                    
+                </div>
+
+                <div class="portfolio-child">
+                    <img src="asset/food-burger.jpg" alt="">
+                    <h3> WIRELESS BLUETHOOTH DISPLAY</h3>
+                    <p>I designed and created a wireless Bluetooth display using an Arduino Uno. This project allows for sending messages through Bluetooth from a mobile device, and the messages are displayed on the LCD screen.</p>
+                    
+                </div>
+
+           
+            </div>
+        </div>
+    </section>
+    <section class="portfolio-sec">
+        <div class="portfolio layout">
+            <h3 class="uppercase text-center pd-30">Skills</h3>
+            <div class="portolio-parent flex justify-center align-center text-center">
+                <div class="portfolio-child">
+                    <h1>Technical skills</h1>
+                    <p>Programming languages ( Python, Java,C)
+                        Web development (HTML, CSS, JavaScript)
+                        Database management (SQL, MySQL,)
+                        Operating systems (Windows)</p>
+                    
+                    
+                </div>
+
+                <div class="portfolio-child">
+                    <img src="asset/food-burger.jpg" alt="">
+                    <h3>SOFT SKILLs</h3>
+                    <p>Soft Skills:
+
+                        Communication skills (verbal and written)
+                        Teamwork and collaboration
+                        Problem-solving and critical thinking
+                        Time management and organization
+                        Adaptability and flexibility
+                        Leadership and management </p>
+                    
+                </div>
+
+                <div class="portfolio-child">
+                    <img src="asset/social media.jpg" alt="">
+                    <h3>PRESENTATION SKILLS</h3>
+                    <p>
+
+                        Delivering effective presentations
+                        Public speaking</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- portfolio section end  -->
+
+
+    <!-- experience section end  -->
+
+    <!-- testimonal section start  -->
+    <section class="testimonial-sec">
+        <div class="testimonial layout">
+            <h3 class="uppercase text-center pd-30"></h3>
+            <div class="testimonial-parent flex space-between align-center">
+                <div class="testimonial-child">
+                    <img src="asset/user001.jpg" alt="">
+                    <h1>COURSES AND INTERSHIPS</h1>
+                    <p>I am currently enrolled in an ongoing web development course.
+
+                        I also participated in a Summer Internship organized by New Horizon College of Engineering.
+                        
+                        
+                        
+                        
+                        </p>
+                    <div class="review-sec flex space-between">
+                        <div class="icon-sec">
+                           
+                        </div>
+                        <div class="name-sec text-center">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-child">
+                    <img src="asset/user002.jpg" alt="">
+                    <h1>EXTRA-CURICULAR</h1>
+                    <p> New Horizon College of Engineering Alumni Club Association 
+                        Member and
+                        College Wrestling Team Member - Represented the college in VTU Wrestling Championship held at Mysore</p>
+                    <div class="review-sec flex space-between">
+                        
+                        
+                    </div>
+                </div>
+
+                <div class="testimonial-child">
+                    <img src="asset/user003.jpg" alt="">
+                    <h1>HOBBIES</h1>
+                    <p>I hit the gym to stay in shape, enjoy traveling to broaden my understanding of the world, indulge in coding for my future prospects, and turn to music to unwind and relieve stress.</p>
+                    <div class="review-sec flex space-between">
+                        <div class="icon-sec">
+                            
+                        </div>
+                        <div class="name-sec text-center">
+
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonal section end -->
+
+    <!-- contact-us section start  -->
+    <section class="contact-us-sec">
+        <div class="contact-us layout">
+            <h3 class="text-center uppercase pd-30">Contact Me</h3>
+            <div class="contact-details flex space-between align-center">
+                <div class="left-sec">
+                    <h5></h5>
+                    <p>Shiv ganga nilaya, <br>3rd cross rani channamma marg, <br>Pant balekudri, Belgaum-591124</p>
+                </div>
+                <div class="center-sec">
+                    <h5>Contact No.</h5>
+                    <p>Mobile No. 8431437824</p>
+                    <h5>Email Id</h5>
+                    <p>shivrajak280@gmail.com</p>
+                </div>
+                <div class="right-sec text-center">
+                    <form action="">
+                        Email : <input type="email" id="email-id"> <br>
+                        <button class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact-us section end  -->
+
+    <!-- footer section  -->
+    <footer>
+        <div class="footer-sec layout text-center">
+            <p>Copyright &copy; shivrajak280 | All Right Reserved</p>
+        </div>
+    </footer>
+</body>   
+    </html> 
